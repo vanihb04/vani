@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Mortgage Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], input[type="date"], input[type="email"], textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        .assets, .liabilities {
+            grid-column: 1 / -1;
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            align-items: center;
+        }
+        .radio-group input, .checkbox-group input {
+            margin-left: 10px;
+        }
+        .footer {
+            grid-column: 1 / -1;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Mortgage Application</h1>
+        <form>
+            <div class="applicant-information">
+                <label for="name">Name (required)</label>
+                <input type="text" id="name" required>
+
+                <label for="address">Street Address (required)</label>
+                <input type="text" id="address" required>
+
+                <label for="city">City (required)</label>
+                <input type="text" id="city" required>
+
+                <label for="state">State (required)</label>
+                <input type="text" id="state" required>
+
+                <label for="zip">Postal Code (required)</label>
+                <input type="text" id="zip" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email">
+
+                <label for="phone">Home Phone (required)</label>
+                <input type="text" id="phone" required>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob">
+
+                <label for="employer">Employer (required)</label>
+                <input type="text" id="employer" required>
+
+                <label for="income">Annual Income (required)</label>
+                <input type="number" id="income" required>
+            </div>
+
+            <div class="coapplicant-information">
+                <label for="co-name">Name</label>
+                <input type="text" id="co-name">
+
+                <label for="co-address">Street Address</label>
+                <input type="text" id="co-address">
+
+                <label for="co-city">City</label>
+                <input type="text" id="co-city">
+
+                <label for="co-state">State</label>
+                <input type="text" id="co-state">
+
+                <label for="co-zip">Postal Code</label>
+                <input type="text" id="co-zip">
+
+                <label for="co-email">Email</label>
+                <input type="email" id="co-email">
+
+                <label for="co-phone">Home Phone</label>
+                <input type="text" id="co-phone">
+
+                <label for="co-dob">Date of Birth</label>
+                <input type="date" id="co-dob">
+
+                <label for="co-employer">Employer</label>
+                <input type="text" id="co-employer">
+
+                <label for="co-income">Annual Income</label>
+                <input type="number" id="co-income">
+            </div>
+
+            <div class="assets full-width">
+                <h3>Assets</h3>
+                <label for="cash">Cash</label>
+                <input type="number" id="cash">
+                <label for="savings">Savings</label>
+                <input type="number" id="savings">
+                <label for="retirement">Retirement</label>
+                <input type="number" id="retirement">
+                <label for="total-assets">Total Assets</label>
+                <input type="number" id="total-assets">
+            </div>
+
+            <div class="liabilities full-width">
+                <h3>Liabilities</h3>
+                <label for="loan1">Loan 1</label>
+                <input type="number" id="loan1">
+                <label for="loan2">Loan 2</label>
+                <input type="number" id="loan2">
+                <label for="loan3">Loan 3</label>
+                <input type="number" id="loan3">
+                <label for="total-liabilities">Total Liabilities</label>
+                <input type="number" id="total-liabilities">
+            </div>
+
+            <div class="additional-info full-width">
+                <label for="notes">Is there any additional information we should be aware of?</label>
+                <textarea id="notes" rows="4"></textarea>
+            </div>
+
+            <div class="footer full-width">
+                <label class="radio-group">Do you have an agent? 
+                    <input type="radio" name="agent" value="yes"> Yes 
+                    <input type="radio" name="agent" value="no"> No
+                </label>
+
+                <label class="checkbox-group">Available for down payment
+                    <input type="checkbox" name="downpayment">
+                </label>
+
+                <label for="loan-amount">Loan Amount Requested</label>
+                <input type="number" id="loan-amount" required>
+
+                <label for="term">Term</label>
+                <input type="number" id="term" required>
+
+                <label for="purpose">Purpose of Loan</label>
+                <input type="text" id="purpose" required>
+
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
